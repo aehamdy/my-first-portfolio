@@ -10,11 +10,16 @@ import PortfolioLoader from "./components/PortfolioLoader";
 import useSectionVisibility from "./hooks/useSectionVisibility";
 import useSVGAnimation from "./hooks/useSVGAnimation";
 import usePageLoader from "./hooks/usePageLoader";
+import { Outlet, useLocation } from "react-router-dom";
+import GlobalLoadingOverlay from "./components/GlobalLoadingOverlay";
 
 function App() {
   const { visibleSection, handleSectionChange } = useSectionVisibility();
   const contentRef = useRef(null);
   const LOADING_DURATION = 3800;
+  const location = useLocation();
+
+  const isProjectDetailsPage = location.pathname.startsWith("/projects/");
 
   useSVGAnimation(); // Initialize SVG animation hook
   const loading = usePageLoader(LOADING_DURATION); // Initialize loading state
@@ -40,8 +45,9 @@ function App() {
   }
 
   return (
-    // <></>
     <>
+      {loading && <GlobalLoadingOverlay />}
+
       <div className="grand-parent md:relative lg:h-[100dvh] mx-auto md:ps-20 lg:ps-0 lg:py-2 lg:overflow-hidden">
         {/* Display on all screens excpet large screens and larger */}
         <div className="parent lg:hidden relative">
@@ -53,10 +59,18 @@ function App() {
 
             <div className="gap-5 rounded-main-section overflow-hidden">
               <div className="all-sections-holder vertical-scrollbar grid grid-cols-1 gap-5 mb-2">
-                <AboutSection />
-                <ResumeSection />
-                <ProjectsSection />
-                <ContactSection />
+                {isProjectDetailsPage ? (
+                  <>
+                    <Outlet />
+                  </>
+                ) : (
+                  <>
+                    <AboutSection />
+                    <ResumeSection />
+                    <ProjectsSection />
+                    <ContactSection />
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -70,26 +84,23 @@ function App() {
               <HeroSection onSectionChange={handleSectionChange} />
             </div>
 
-            <div className="lg:col-span-3 gap-5 rounded-main-section overflow-hidden">
+            <div className="content-wrapper lg:col-span-3 gap-5 rounded-main-section overflow-hidden">
               <div
                 ref={contentRef}
                 className="all-sections-holder vertical-scrollbar grid lg:col-span-3 gap-5 lg:h-[90dvh] mb-2 lg:mb-0 bg-section-light dark:bg-section-dark lg:overflow-auto lg:overflow-x-hidden lg:rounded-main-section"
               >
-                {visibleSection.about && (
+                {/* {visibleSection.about && (
                   <div className="lg:animate-fadeInUp">
                     <AboutSection />
                   </div>
                 )}
+
                 {visibleSection.resume && (
                   <div className="lg:animate-fadeInUp">
                     <ResumeSection />
                   </div>
                 )}
-                {/* {visibleSection.projects && (
-                  <div className="lg:animate-fadeInUp">
-                    <ProjectsSection visibleSection={visibleSection} />
-                  </div>
-                )} */}
+
                 {visibleSection && visibleSection.projects && (
                   <div className="lg:animate-fadeInUp">
                     <ProjectsSection visibleSection={visibleSection} />
@@ -100,6 +111,37 @@ function App() {
                   <div className="lg:animate-fadeInUp">
                     <ContactSection />
                   </div>
+                )} */}
+                {isProjectDetailsPage ? (
+                  <div className="lg:animate-fadeInUp">
+                    <Outlet />
+                  </div>
+                ) : (
+                  <>
+                    {visibleSection.about && (
+                      <div className="lg:animate-fadeInUp">
+                        <AboutSection />
+                      </div>
+                    )}
+
+                    {visibleSection.resume && (
+                      <div className="lg:animate-fadeInUp">
+                        <ResumeSection />
+                      </div>
+                    )}
+
+                    {visibleSection.projects && (
+                      <div className="lg:animate-fadeInUp">
+                        <ProjectsSection visibleSection={visibleSection} />
+                      </div>
+                    )}
+
+                    {visibleSection.contact && (
+                      <div className="lg:animate-fadeInUp">
+                        <ContactSection />
+                      </div>
+                    )}
+                  </>
                 )}
               </div>
             </div>

@@ -8,16 +8,18 @@ import {
   reactIcon,
   sassIcon,
   tailwindIcon,
+  tsIcon,
 } from "./icons";
 
 const aboutMeSkills = [
-  { value: "HTML", icon: htmlIcon },
-  { value: "CSS", icon: cssIcon },
-  { value: "JavaScript", icon: jsIcon },
   { value: "React", icon: reactIcon },
+  { value: "TypeScript", icon: tsIcon },
+  { value: "JavaScript", icon: jsIcon },
   { value: "Tailwind", icon: tailwindIcon },
-  { value: "SASS", icon: sassIcon },
   { value: "FramerMotion", icon: framerMotionIcon },
+  { value: "SASS", icon: sassIcon },
+  { value: "CSS", icon: cssIcon },
+  { value: "HTML", icon: htmlIcon },
   { value: "Git", icon: gitIcon },
   { value: "Github", icon: githubIconTwo },
 ];
