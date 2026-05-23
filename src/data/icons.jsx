@@ -6,6 +6,7 @@ import {
   IoCloudDownload,
   IoSend,
   IoCodeSlash,
+  IoDocumentText,
 } from "react-icons/io5";
 import {
   FaBriefcase,
@@ -30,10 +31,15 @@ import {
 import { SiTailwindcss } from "react-icons/si";
 import { LiaPagerSolid } from "react-icons/lia";
 import { MdOutlineDesignServices } from "react-icons/md";
-import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
+import {
+  BiLogoTypescript,
+  BiSolidQuoteAltLeft,
+  BiSolidQuoteAltRight,
+} from "react-icons/bi";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { RxExternalLink } from "react-icons/rx";
+import { PiBookOpen, PiFigmaLogo } from "react-icons/pi";
 
 //MiniProfile Icons
 export const sunIcon = <IoSunnyOutline />;
@@ -48,6 +54,8 @@ export const planeIcon = <FaPaperPlane />;
 //SocialMedia Icons
 export const githubIcon = <IoLogoGithub />;
 export const linkedinIcon = <IoLogoLinkedin />;
+export const figmaIcon = <PiFigmaLogo />;
+export const caseStudyIcon = <PiBookOpen />;
 
 //ProfileCardButtons Icons
 export const downloadIcon = <IoCloudDownload />;
@@ -58,13 +66,15 @@ export const htmlIcon = <DiHtml5 />;
 export const cssIcon = <DiCss3 />;
 export const sassIcon = <DiSass />;
 export const jsIcon = <DiJsBadge />;
+export const tsIcon = <BiLogoTypescript />;
 export const reactIcon = <DiReact />;
 export const tailwindIcon = <SiTailwindcss />;
 export const framerMotionIcon = <TbBrandFramerMotion />;
 export const gitIcon = <DiGit />;
 export const githubIconTwo = <DiGithubBadge />;
 
-// export const externalLinkicon = <RxExternalLink />;
+export const externalLinkicon = <RxExternalLink />;
+
 //ServiceCard icons
 export const codeIcon = (
   <IoCodeSlash style={{ strokeWidth: "0.1", fontSize: "40px" }} />
@@ -100,3 +110,6 @@ export const educationIcon = <FaGraduationCap />;
 // Arrow Icons
 export const arrowRight = <SlArrowRight />;
 export const arrowLeft = <SlArrowLeft />;
+
+// Document Icon
+export const documentIcon = <IoDocumentText />;

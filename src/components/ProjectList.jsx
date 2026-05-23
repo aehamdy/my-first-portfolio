@@ -1,23 +1,34 @@
 /* eslint-disable react/prop-types */
-import personalInfo from "../data/personalInfo";
-// import { projects } from "../data/projects";
+import { useNavigate } from "react-router-dom";
 import NoProjectsFound from "./NoProjectsFound";
 import ProjectCard from "./ProjectCard";
 import SeparatorToBottom from "./SeparatorToBottom";
+import { useLoading } from "../context/LoadingContext";
+import projectsList from "../data/projectsList";
 
 function ProjectList({ selectedCategory }) {
   const projectsArray = [];
+  const { setLoading } = useLoading();
+  const navigate = useNavigate();
 
-  const filteredProjects = personalInfo.projects.filter((project) => {
+  const filteredProjects = projectsList.filter((project) => {
     if (selectedCategory.toLowerCase() === "all") {
       return project.addToPortfolioProjects;
     } else {
       project.category.includes(selectedCategory.toLowerCase()) &&
         projectsArray.push(project);
 
-      return project.addToPortfolioProjects && project.category.includes(selectedCategory.toLowerCase());
+      return (
+        project.addToPortfolioProjects &&
+        project.category.includes(selectedCategory.toLowerCase())
+      );
     }
   });
+
+  const handleClick = (slug) => {
+    setLoading(true);
+    navigate(`/projects/${slug}`);
+  };
 
   return (
     <div
@@ -31,8 +42,10 @@ function ProjectList({ selectedCategory }) {
         </div>
       )}
       {filteredProjects.length > 0 ? (
-        filteredProjects.map((project, i) => (
-          <ProjectCard key={i} project={project} />
+        filteredProjects.map((project) => (
+          <div key={project.id} onClick={() => handleClick(project.slug)}>
+            <ProjectCard project={project} />
+          </div>
         ))
       ) : (
         <NoProjectsFound selectedCategory={selectedCategory} />

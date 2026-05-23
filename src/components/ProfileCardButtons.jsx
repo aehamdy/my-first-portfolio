@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
-import handleFileDownload from "../data/handleFileDownload";
-import { downloadIcon, sendIcon } from "../data/icons";
+import { Link } from "react-router-dom";
+import { documentIcon, sendIcon } from "../data/icons";
+import personalInfo from "../data/personalInfo";
 
 function ProfileCardButtons({ onSectionChange }) {
   return (
     <div className="relative w-full">
       <span className="absolute top-0 left-0 w-full h-[1px] bg-custom-gradient-to-r"></span>
+
       <div className="relative flex w-full text-sm font-semibold">
-        <button
+        {/* <button
           onClick={handleFileDownload}
           className="group flex justify-center gap-3 w-1/2 py-4 hover:text-accent duration-short"
         >
@@ -15,10 +17,22 @@ function ProfileCardButtons({ onSectionChange }) {
           <span className="group-hover:text-accent translate-y-1 group-hover:-translate-y-1 duration-short">
             {downloadIcon}
           </span>
-        </button>
-        <span className="absolute start-1/2 translate-x-[-50%] h-full w-[1px] bg-custom-gradient-to-b"></span>
+        </button> */}
         <a
-          href="#contact"
+          href={personalInfo.resumeLink}
+          target="_blank"
+          className="group flex justify-center gap-3 w-1/2 py-4 hover:text-accent duration-short"
+        >
+          View Resume
+          <span className="group-hover:text-accent group-hover:-translate-y-1 duration-short">
+            {documentIcon}
+          </span>
+        </a>
+
+        <span className="absolute start-1/2 translate-x-[-50%] h-full w-[1px] bg-custom-gradient-to-b"></span>
+
+        <Link
+          to="/#contact"
           onClick={() => onSectionChange("contact")}
           className="group flex justify-center gap-3 w-1/2 py-4 hover:text-accent duration-short"
         >
@@ -26,7 +40,7 @@ function ProfileCardButtons({ onSectionChange }) {
           <span className="-rotate-45 group-hover:text-accent group-hover:-translate-y-1 duration-short">
             {sendIcon}
           </span>
-        </a>
+        </Link>
       </div>
     </div>
   );
