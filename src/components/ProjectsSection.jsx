@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import ProjectCategories from "./ProjectCategories";
+// import ProjectCategories from "./ProjectCategories";
 import ProjectList from "./ProjectList";
 import SectionTitle from "./SectionTitle";
 import SeparatorToRight from "./SeparatorToRight";
 
 function ProjectsSection({ visibleSection = {} }) {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  // const [selectedCategory, setSelectedCategory] = useState("all");
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   // if (!visibleSection || !visibleSection.projects) {
@@ -44,23 +44,25 @@ function ProjectsSection({ visibleSection = {} }) {
           <div className="flex justify-between items-center">
             <SectionTitle title="projects" />
             <div className="hidden sm:block">
-              <ProjectCategories
+              {/* <ProjectCategories
                 setSelectedCategory={setSelectedCategory}
                 selectedCategory={selectedCategory}
-              />
+              /> */}
             </div>
           </div>
           <div className="mt-horizontal-separator-mt">
             <SeparatorToRight />
           </div>
           <div className="pt-4 sm:hidden">
-            <ProjectCategories
+            {/* <ProjectCategories
               setSelectedCategory={setSelectedCategory}
               visibleSection={visibleSection}
               selectedCategory={selectedCategory}
-            />
+            /> */}
           </div>
-          <ProjectList selectedCategory={selectedCategory} />
+          <ProjectList
+          //  selectedCategory={selectedCategory}
+            />
         </>
       </section>
 
@@ -69,12 +71,14 @@ function ProjectsSection({ visibleSection = {} }) {
           <>
             <div className="flex justify-between items-center">
               <SectionTitle title="projects" />
-              <ProjectCategories setSelectedCategory={setSelectedCategory} />
+              {/* <ProjectCategories setSelectedCategory={setSelectedCategory} /> */}
             </div>
             <div className="mt-horizontal-separator-mt">
               <SeparatorToRight />
             </div>
-            <ProjectList selectedCategory={selectedCategory} />
+            <ProjectList 
+            // selectedCategory={selectedCategory}
+             />
           </>
         )}
       </div>
