@@ -8,6 +8,8 @@ const personalInfo = {
   },
   phoneNumber: "+20 1010573100",
   email: "ae.devverse@gmail.com",
+  resumeLink:
+    "https://docs.google.com/document/d/1xM_4GoR1bQUOieo0WPc9CngnVsNQSh6o5ZHxuqcL9iw/edit?usp=sharing",
   residence: "Egypt",
   location: "Cairo, Egypt",
   languages: [
