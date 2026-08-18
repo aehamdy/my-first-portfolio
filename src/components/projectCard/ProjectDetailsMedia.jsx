@@ -14,7 +14,7 @@ function ProjectDetailsMedia({ gallery = [], thumbnail }) {
       <div
         className={`${gallery.length > 1 ? "lg:col-span-4" : "lg:col-span-5"} h-[400px] overflow-hidden`}
       >
-        <div className="relative w-full h-full rounded-2xl bg-section-light-secondary dark:bg-section-dark-secondary aspect-video overflow-hidden">
+        <div className="relative w-full h-full rounded-lg bg-section-light-secondary dark:bg-section-dark-secondary aspect-video overflow-hidden">
           <img
             key={activeMedia.image}
             src={activeMedia.image || thumbnail}
@@ -40,7 +40,7 @@ function ProjectDetailsMedia({ gallery = [], thumbnail }) {
                 <button
                   key={media.id}
                   onClick={() => setActiveIndex(index)}
-                  className={`relative overflow-hidden rounded-xl border-2 transition-all duration-300 shrink-0 aspect-video w-32 lg:w-full
+                  className={`relative overflow-hidden rounded-md border-2 transition-all duration-300 shrink-0 aspect-video w-32 lg:w-full
                   ${isActive ? "border-accent scale-[0.98]" : "border-transparent opacity-70 hover:opacity-100 hover:border-accent/40"}`}
                 >
                   <img
