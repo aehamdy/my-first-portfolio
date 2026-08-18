@@ -1,4 +1,11 @@
-import athloStore from "../assets/projects/athlo-store.webp";
+import athloStore from "../assets/projects/athlo-store/athlo-store-thumbnail.webp";
+import athloStoreImage1 from "../assets/projects/athlo-store/athlo-store-image1.webp";
+import athloStoreImage2 from "../assets/projects/athlo-store/athlo-store-image2.webp";
+import athloStoreImage3 from "../assets/projects/athlo-store/athlo-store-image3.webp";
+import athloStoreImage4 from "../assets/projects/athlo-store/athlo-store-image4.webp";
+import athloStoreImage5 from "../assets/projects/athlo-store/athlo-store-image5.webp";
+import athloStoreImage6 from "../assets/projects/athlo-store/athlo-store-image6.webp";
+import athloStoreImage7 from "../assets/projects/athlo-store/athlo-store-image7.webp";
 import athloThumbnail from "../assets/projects/athlo-dashboard/thumbnail.webp";
 import athlo1 from "../assets/projects/athlo-dashboard/1.webp";
 import athlo2 from "../assets/projects/athlo-dashboard/2.webp";
@@ -14,7 +21,10 @@ import brewhaus4 from "../assets/projects/brewhaus/brewhaus-4.webp";
 import klane from "../assets/projects/k-lane.webp";
 import typeTallyImg from "../assets/projects/type-tally.webp";
 import snowDashboard from "../assets/projects/snow-ui-dashboard.webp";
-import sawadPortfolioImg from "../assets/projects/sawad-portfolio.webp";
+import sawadPortfolioImg from "../assets/projects/sawad-portfolio/thumbnail.webp";
+import sawadPortfolioGallery1 from "../assets/projects/sawad-portfolio/gallery-1.webp";
+import sawadPortfolioGallery2 from "../assets/projects/sawad-portfolio/gallery-2.webp";
+import sawadPortfolioGallery3 from "../assets/projects/sawad-portfolio/gallery-3.webp";
 import todomoroAppImg from "../assets/projects/todomoro.webp";
 import glozinImg from "../assets/projects/glozin.webp";
 import gleamyAgencyImg from "../assets/projects/gleamy-agency.webp";
@@ -32,7 +42,8 @@ const projectsList = [
     id: 1,
     slug: "athlo-store",
     cvName: "Athlo Store",
-    status: "Building the Next Feature...",
+    // status: "Building the Next Feature...",
+    status: "completed",
     year: "2026",
     isFeatured: true,
 
@@ -40,42 +51,155 @@ const projectsList = [
       title: "Athlo Store",
       role: "Frontend Developer",
       links: {
-        live: "",
+        live: "https://athlo-store.vercel.app",
         github: "https://github.com/aehamdy/athlo-store",
       },
     },
 
     media: {
       thumbnail: { image: athloStore, altText: "athlo store image" },
-      gallery: [{ id: 1, image: "", altText: "", title: "" }],
+      gallery: [
+        {
+          id: 1,
+          image: athloStore,
+          altText: "Thumbnail Image",
+          title: "Athlo store thumbnail image",
+        },
+        {
+          id: 2,
+          image: athloStoreImage1,
+          altText: "Athlo-Store Image 1",
+          title: "Athlo store Image 1",
+        },
+        {
+          id: 3,
+          image: athloStoreImage2,
+          altText: "Athlo-Store Image 2",
+          title: "Athlo store Image 2",
+        },
+        {
+          id: 4,
+          image: athloStoreImage3,
+          altText: "Athlo-Store Image 3",
+          title: "Athlo store Image 3",
+        },
+        {
+          id: 5,
+          image: athloStoreImage4,
+          altText: "Athlo-Store Image 4",
+          title: "Athlo store Image 4",
+        },
+        {
+          id: 6,
+          image: athloStoreImage5,
+          altText: "Athlo-Store Image 5",
+          title: "Athlo store Image 5",
+        },
+        {
+          id: 7,
+          image: athloStoreImage6,
+          altText: "Athlo-Store Image 6",
+          title: "Athlo store Image 6",
+        },
+        {
+          id: 8,
+          image: athloStoreImage7,
+          altText: "Athlo-Store Image 7",
+          title: "Athlo store Image 7",
+        },
+      ],
     },
 
-    metrics: {},
-    features: [],
+    metrics: {
+      architecture: "App Router + feature-based architecture",
+      localization: "English and Arabic localization",
+      forms: "Schema-driven forms with React Hook Form and Zod",
+      dataFetching: "Server-state management with TanStack Query",
+    },
+
+    features: [
+      "Modern sportswear e-commerce storefront",
+      "Product discovery and category browsing",
+      "Product search, filtering, and sorting",
+      "Product details and related products",
+      "Shopping cart and cart management",
+      "Multi-step checkout experience",
+      "Shipping method selection",
+      "Customer authentication",
+      "Forgot password and verification-code flows",
+      "User profile and account management",
+      "Form validation with Zod",
+      "English and Arabic localization",
+      "RTL support for Arabic",
+      "Responsive design across devices",
+      "API-driven product and commerce data",
+      "Optimized server-state management with TanStack Query",
+      "Reusable component architecture",
+      "Accessible and responsive UI",
+    ],
 
     technologies: [
       "Next.js",
-      "Tailwind CSS",
-      "Shadcn",
+      "React",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "Shadcn UI",
       "TanStack Query",
-      "TanStack Table",
       "React Hook Form",
       "Zod",
       "Axios",
+      "next-intl",
+      "Zustand",
+      "Lucide React",
+      "Responsive Design",
+      "REST API",
     ],
 
-    highlights: [],
+    highlights: [
+      "Production-ready e-commerce storefront",
+      "Modern Next.js App Router architecture",
+      "Feature-based scalable frontend structure",
+      "English and Arabic localization with RTL support",
+      "End-to-end shopping and checkout experience",
+      "Reusable component and form systems",
+      "API-driven architecture",
+      "Responsive and accessibility-focused UI",
+    ],
 
     challenge: {
-      problem:
-        "Building responsive layouts that adapt to different screen sizes and devices",
-      solution: ["Using CSS Grid and Flexbox to create responsive layouts"],
+      problem: `
+  Building a modern e-commerce storefront that provides a seamless shopping experience while supporting complex product data, authentication, cart management, checkout workflows, API integration, and multiple languages with RTL support.
+    `,
+
+      solution: [
+        "Built the storefront using Next.js App Router with a scalable feature-based architecture",
+
+        "Implemented product discovery with search, filtering, category browsing, and API-driven data fetching",
+
+        "Developed a complete shopping cart and checkout flow with shipping method selection and dynamic order summaries",
+
+        "Implemented authentication flows including sign in, forgot password, and verification-code pages",
+
+        "Used React Hook Form and Zod to build structured forms with reliable client-side validation",
+
+        "Integrated TanStack Query for efficient server-state management, caching, loading states, and API synchronization",
+
+        "Implemented English and Arabic localization using next-intl with full RTL support",
+
+        "Designed responsive and reusable UI components using Tailwind CSS and shadcn/ui",
+      ],
     },
 
     simpleDiscribtion:
-      "Sportswear e-commerce store with full-stack integration",
+      "Modern sportswear e-commerce storefront with multilingual shopping and checkout experiences.",
 
-    description: `Full-stack e-commerce application designed to manage a comprehensive sportswear e-commerce platform. Features include product inventory management, order tracking, customer analytics, sales reporting, and user role-based access control. The dashboard integrates seamlessly with a backend server and database to provide real-time data synchronization and efficient business operations management.`,
+    description: `
+  Athlo Store is a modern, production-ready sportswear e-commerce storefront built with Next.js, React, and TypeScript. The application provides a complete shopping experience including product discovery, search and filtering, product details, cart management, authentication, shipping selection, and checkout workflows.
+
+  The project focuses on scalable frontend architecture, reusable UI components, reliable form handling, API integration, and responsive user experiences. TanStack Query is used for efficient server-state management and data synchronization, while React Hook Form and Zod provide structured and validated form workflows.
+
+  Athlo Store also supports English and Arabic localization through next-intl, including full RTL support and dedicated typography for each language. The result is a polished, responsive storefront designed to provide a consistent shopping experience across languages and devices.
+  `,
 
     category: [categories.webApp, categories.api],
 
@@ -513,7 +637,32 @@ const projectsList = [
 
     media: {
       thumbnail: { image: sawadPortfolioImg, altText: "sawadPortfolio image" },
-      gallery: [{ id: 1, image: "", altText: "", title: "" }],
+      gallery: [
+        {
+          id: 1,
+          image: sawadPortfolioImg,
+          altText: "Thumbnail Image",
+          title: "Thumbnail Image",
+        },
+        {
+          id: 2,
+          image: sawadPortfolioGallery1,
+          altText: "Gallery Image 1",
+          title: "Gallery Title 1",
+        },
+        {
+          id: 3,
+          image: sawadPortfolioGallery2,
+          altText: "Gallery Image 2",
+          title: "Gallery Title 2",
+        },
+        {
+          id: 4,
+          image: sawadPortfolioGallery3,
+          altText: "Gallery Image 3",
+          title: "Gallery Title 3",
+        },
+      ],
     },
 
     metrics: {},
