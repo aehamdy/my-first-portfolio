@@ -8,7 +8,7 @@ function ProjectCard({ project }) {
       className={`group relative w-full h-fit ${project.status === "completed" ? "cursor-pointer" : "cursor-default"}`}
     >
       <div className="flex flex-col gap-3">
-        <div className="relative w-full rounded-[25px] overflow-hidden">
+        <div className="relative w-full rounded-xl overflow-hidden">
           {/* Status Overlay */}
           {project.status !== "completed" && (
             <div className="absolute w-full h-full start-0 top-0 flex flex-col justify-center items-center font-semibold text-lg text-accent bg-black/50 backdrop-blur-sm z-10">
