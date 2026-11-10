@@ -35,14 +35,266 @@ import spentrackerApp from "../assets/projects/spentracker.webp";
 import agencyTemplate from "../assets/projects/Agency_Template.webp";
 import kasperTemplate from "../assets/projects/Kasper_Template.webp";
 import leonTemplate from "../assets/projects/Leon_Template.webp";
+import todomoroThumbnail from "../assets/projects/todomoro/Thumbnail (Cover Frame).webp";
+import todomoro1 from "../assets/projects/todomoro/1-Overview.webp";
+import todomoro2 from "../assets/projects/todomoro/2-Task Management.webp";
+import todomoro3 from "../assets/projects/todomoro/3-Project Management.webp";
+import todomoro4 from "../assets/projects/todomoro/4-Pomodoro Timer.webp";
+import todomoro5 from "../assets/projects/todomoro/5-Pomdoro Customization.webp";
+import todomoro6 from "../assets/projects/todomoro/6-Productivity Analytics.webp";
+import todomoro7 from "../assets/projects/todomoro/7-Authentication.webp";
+import todomoro8 from "../assets/projects/todomoro/8-Themes.webp";
+import todomoro9 from "../assets/projects/todomoro/9-Responsive Design.webp";
 
 import { categories } from "./categories";
 const projectsList = [
   {
     id: 1,
+    slug: "todomoro-app",
+    cvName: "Todomoro",
+    // status: "Building the Next Feature...",
+    status: "completed",
+    year: "2026",
+    isFeatured: true,
+
+    info: {
+      title: "Todomoro",
+      role: "Full Stack Developer",
+      links: {
+        // Add the deployed application URL when available.
+        live: "https://todomoro.vercel.app/",
+        github: "https://github.com/aehamdy/todomoro-app",
+      },
+    },
+
+    media: {
+      thumbnail: {
+        image: todomoroThumbnail,
+        altText: "Todomoro productivity application thumbnail",
+      },
+      gallery: [
+        {
+          id: 1,
+          image: todomoro1,
+          altText:
+            "Todomoro overview dashboard showing productivity summaries, today's tasks, schedule, and recent projects",
+          title: "Your Productivity at a Glance",
+        },
+        {
+          id: 2,
+          image: todomoro2,
+          altText:
+            "Todomoro task management interface showing organized tasks and task details",
+          title: "Smart Task Management",
+        },
+        {
+          id: 3,
+          image: todomoro3,
+          altText:
+            "Todomoro projects interface showing organized projects and their associated tasks",
+          title: "Organize Work with Projects",
+        },
+        {
+          id: 4,
+          image: todomoro4,
+          altText:
+            "Todomoro Pomodoro timer widget for managing focus and break sessions",
+          title: "Build Better Focus Habits",
+        },
+        {
+          id: 5,
+          image: todomoro5,
+          altText:
+            "Todomoro Pomodoro settings for customizing timer durations, automation, alarms, and background sounds",
+          title: "Customize Your Focus Routine",
+        },
+        {
+          id: 6,
+          image: todomoro6,
+          altText:
+            "Todomoro productivity statistics with daily, weekly, and monthly focus analytics",
+          title: "Measure Your Productivity",
+        },
+        {
+          id: 7,
+          image: todomoro7,
+          altText:
+            "Todomoro overview dashboard displayed in different customizable color themes",
+          title: "A Workspace That Feels Like Yours",
+        },
+        {
+          id: 8,
+          image: todomoro8,
+          altText: "Todomoro account and application preferences settings",
+          title: "Personalize Your Experience",
+        },
+        {
+          id: 9,
+          image: todomoro9,
+          altText:
+            "Todomoro responsive interface across desktop, tablet, and mobile devices",
+          title: "Productivity Across Every Screen",
+        },
+      ],
+    },
+
+    metrics: {
+      architecture: "MERN stack + feature-based architecture",
+      authentication:
+        "JWT authentication with secure HTTP-only cookies and CSRF protection",
+      forms: "Schema-driven validation with React Hook Form and Zod",
+      dataFetching: "Server-state management with TanStack Query",
+      database: "MongoDB with Mongoose ODM",
+      interface: "Responsive UI with MUI and Tailwind CSS",
+    },
+
+    features: [
+      "Full-stack productivity and task management application",
+      "User registration, login, and protected routes",
+      "JWT authentication with secure HTTP-only cookies",
+      "CSRF protection for state-changing requests",
+      "Task creation, editing, deletion, and completion tracking",
+      "Task priorities and due dates",
+      "Task notes and nested subtasks",
+      "Project creation and management",
+      "Organizing tasks within projects or independently",
+      "Interactive Pomodoro focus timer",
+      "Configurable focus, short break, and long break durations",
+      "Automatic transitions between focus and break sessions",
+      "Customizable timer automation preferences",
+      "Multiple alarm options and adjustable volume",
+      "Built-in background sounds for focused work",
+      "Pomodoro sessions associated with tasks and projects",
+      "Tracking completed focus and break sessions",
+      "Daily, weekly, and monthly productivity statistics",
+      "Focus time and completed session analytics",
+      "Task and project productivity breakdowns",
+      "12 customizable application color themes",
+      "User preferences and appearance settings",
+      "Task completion sound preference",
+      "Customizable task creation ordering",
+      "Responsive dashboard with adaptive navigation",
+      "Animated interface and page transitions",
+      "API-driven architecture with centralized API handling",
+      "Reusable components and feature-based code organization",
+    ],
+
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Material UI",
+      "Tailwind CSS",
+      "Motion",
+      "TanStack Query",
+      "React Hook Form",
+      "Zod",
+      "Axios",
+      "Day.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "REST API",
+    ],
+
+    highlights: [
+      "Complete MERN stack application developed with TypeScript",
+      "Scalable feature-based frontend and backend architecture",
+      "Secure authentication using JWT, HTTP-only cookies, and CSRF protection",
+      "Comprehensive task and project management workflows",
+      "Customizable Pomodoro timer with alarms and background sounds",
+      "Task-aware focus sessions and productivity tracking",
+      "Daily, weekly, and monthly productivity analytics",
+      "12 professionally designed color themes",
+      "Responsive interface with modern animations",
+      "Reusable components and centralized state and API management",
+    ],
+
+    challenge: {
+      problem: `
+      Building a comprehensive productivity application that combines task
+      management, project organization, and focused work sessions into one
+      cohesive experience. The application also needed to support secure
+      authentication, reliable data management, customizable user
+      preferences, and meaningful productivity analytics while maintaining
+      a responsive and intuitive interface.
+    `,
+
+      solution: [
+        "Developed a full-stack MERN application using TypeScript, with a feature-based architecture to keep frontend and backend responsibilities organized and maintainable",
+
+        "Implemented secure authentication using JWT stored in HTTP-only cookies, protected routes, and CSRF token validation",
+
+        "Built a comprehensive task management system supporting priorities, due dates, notes, subtasks, completion tracking, and optional project association",
+
+        "Implemented project management functionality to help users organize related tasks and manage different areas of work",
+
+        "Developed an interactive Pomodoro timer with configurable focus and break durations, automatic transitions, and customizable automation preferences",
+
+        "Added multiple alarm options, adjustable alarm volume, and built-in background sounds using the Web Audio API",
+
+        "Connected Pomodoro sessions with tasks and projects, allowing users to track focused work and associate completed sessions with their activities",
+
+        "Designed productivity analytics with daily, weekly, and monthly views, including focus time and task and project breakdowns",
+
+        "Implemented user preferences for application appearance, timer behavior, task organization, and completion sounds",
+
+        "Created 12 customizable color themes using a centralized Material UI theme system",
+
+        "Integrated TanStack Query for server-state management, caching, and synchronization with the backend API",
+
+        "Used React Hook Form and Zod for structured form handling and schema-based validation",
+
+        "Designed a responsive dashboard with adaptive navigation and modern interface animations",
+      ],
+    },
+
+    simpleDiscribtion:
+      "A full-stack productivity application combining task management, project organization, customizable Pomodoro sessions, and productivity analytics.",
+
+    description: `
+    Todomoro is a full-stack productivity application built with the MERN
+    stack and TypeScript. It brings task management, project organization,
+    focused work sessions, and productivity analytics together in one
+    customizable workspace.
+
+    The application provides a comprehensive task management experience
+    with priorities, due dates, notes, subtasks, and project association.
+    Users can organize their work into projects while keeping independent
+    tasks separate when needed.
+
+    Todomoro also features a customizable Pomodoro timer with configurable
+    focus and break durations, automatic session transitions, multiple
+    alarms, and built-in background sounds. Completed sessions can be
+    associated with tasks and projects, providing useful context for
+    productivity tracking.
+
+    The statistics dashboard helps users understand their work patterns
+    through daily, weekly, and monthly analytics, including focus time and
+    task and project breakdowns.
+
+    Built with a feature-based architecture, TanStack Query, React Hook Form,
+    and Zod, the application focuses on maintainability, reliable data
+    handling, and a consistent user experience. It also includes secure
+    authentication, responsive layouts, modern animations, and 12
+    customizable color themes.
+
+    Todomoro aims to make productivity more organized, measurable, and
+    personal through a unified workspace designed around focused work.
+  `,
+
+    category: [categories.webApp, categories.api],
+
+    addToPortfolioProjects: true,
+    addToDownloadableCv: true,
+    addToViewableCv: false,
+  },
+  {
+    id: 2,
     slug: "athlo-store",
     cvName: "Athlo Store",
-    // status: "Building the Next Feature...",
     status: "completed",
     year: "2026",
     isFeatured: true,
@@ -208,7 +460,7 @@ const projectsList = [
     addToViewableCv: false,
   },
   {
-    id: 2,
+    id: 3,
     slug: "athlo-dashboard",
     cvName: "Athlo Dashboard",
     status: "completed",
@@ -368,7 +620,7 @@ const projectsList = [
     addToViewableCv: true,
   },
   {
-    id: 3,
+    id: 4,
     slug: "brewhaus",
     cvName: "Coffeeshop Website",
     status: "completed",
@@ -444,7 +696,7 @@ const projectsList = [
     addToViewableCv: false,
   },
   {
-    id: 4,
+    id: 5,
     slug: "k-lane",
     cvName: "Coffeeshop Website",
     status: "completed",
@@ -487,7 +739,7 @@ const projectsList = [
     addToViewableCv: false,
   },
   {
-    id: 5,
+    id: 6,
     slug: "type-tally",
     cvName: "Character counting app",
     status: "completed",
@@ -567,7 +819,7 @@ const projectsList = [
     addToViewableCv: false,
   },
   {
-    id: 6,
+    id: 7,
     slug: "snowui-dashboard",
     cvName: "Dashboard UI",
     status: "completed",
@@ -619,7 +871,7 @@ const projectsList = [
     addToViewableCv: false,
   },
   {
-    id: 7,
+    id: 8,
     slug: "sawad-portfolio",
     cvName: "Portfolio",
     status: "completed",
@@ -696,8 +948,8 @@ The website includes animated transitions, clean layout design, and dynamic rout
     addToViewableCv: false,
   },
   {
-    id: 8,
-    slug: "todomoro-app",
+    id: 9,
+    slug: "todomoro-client-side",
     cvName: "Todo App with Pomodoro Timer",
     status: "completed",
     year: "2025",
@@ -707,8 +959,8 @@ The website includes animated transitions, clean layout design, and dynamic rout
       title: "Todomoro App",
       role: "Frontend Developer",
       links: {
-        live: "https://todomoro.vercel.app",
-        github: "https://github.com/aehamdy/Todomoro",
+        live: "https://todomoro-client-side.vercel.app",
+        github: "https://github.com/aehamdy/Todomoro-client-side",
       },
     },
 
@@ -776,7 +1028,7 @@ The project focuses on responsive layouts, reusable UI components, theme customi
     addToViewableCv: false,
   },
   {
-    id: 9,
+    id: 10,
     slug: "glozin",
     cvName: "E-commerce Store",
     status: "completed",
@@ -863,7 +1115,7 @@ The project focuses on responsive storefront design, reusable UI systems, smooth
     addToViewableCv: false,
   },
   {
-    id: 10,
+    id: 11,
     slug: "gleamy-agency",
     cvName: "Agency Website",
     status: "completed",
@@ -944,7 +1196,7 @@ The project demonstrates frontend architecture organization, responsive UI imple
     addToViewableCv: false,
   },
   {
-    id: 11,
+    id: 12,
     slug: "skycast",
     cvName: "Weather App",
     status: "completed",
@@ -1024,7 +1276,7 @@ The project demonstrates API integration workflows, dynamic data rendering, and 
     addToViewableCv: false,
   },
   {
-    id: 12,
+    id: 13,
     slug: "gym-team",
     cvName: "Landing Page",
     status: "completed",
@@ -1105,7 +1357,7 @@ The application demonstrates clean frontend implementation practices, responsive
     addToViewableCv: false,
   },
   {
-    id: 13,
+    id: 14,
     slug: "noties",
     cvName: "Note-Taking App",
     status: "completed",
@@ -1186,7 +1438,7 @@ The project focuses on frontend fundamentals, interactive CRUD operations, and o
     addToViewableCv: false,
   },
   {
-    id: 14,
+    id: 15,
     slug: "spent-tracker",
     cvName: "Spending Tracker App",
     status: "completed",
@@ -1266,7 +1518,7 @@ The project demonstrates frontend fundamentals, clean UI structuring, and intera
     addToViewableCv: false,
   },
   {
-    id: 15,
+    id: 16,
     slug: "agency-template",
     cvName: "Landing Pages (HTML + CSS)",
     status: "completed",
@@ -1346,7 +1598,7 @@ The application demonstrates strong frontend fundamentals including semantic HTM
     addToViewableCv: false,
   },
   {
-    id: 16,
+    id: 17,
     slug: "kasper-template",
     cvName: "Landing Pages (HTML + CSS)",
     status: "completed",
@@ -1426,7 +1678,7 @@ The application focuses on clean UI organization, responsive browsing experience
     addToViewableCv: false,
   },
   {
-    id: 17,
+    id: 18,
     slug: "leon-template",
     cvName: "Landing Pages (HTML + CSS)",
     status: "completed",

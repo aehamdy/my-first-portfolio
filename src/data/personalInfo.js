@@ -30,6 +30,7 @@ const personalInfo = {
     "Self-taught and highly motivated Frontend Developer with strong knowledge of HTML, CSS, JavaScript (ES6+), and React. Experienced in building responsive and accessible web apps using Tailwind CSS, Context API, and React Router. Comfortable working in teams, using Git, and following Agile practices. Always learning and eager to grow through real-world challenges.",
 
   technicalSkills: [
+    // HTML, CSS, JavaScript, TypeScript, Tailwind CSS, Shadcn/ui, Material UI, Framer Motion, ReactJS, Redux, NextJS, NodeJS, ExpressJS, MongoDB, Supabase, Docker, Vercel, Git, GitHub, Postman, npm
     { Languages: ["HTML", "CSS", "JavaScript (ES6+)"] },
     {
       "Frameworks & Libraries": [
